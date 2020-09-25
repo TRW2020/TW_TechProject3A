@@ -47,6 +47,6 @@ namespace TW_TechProject3A
             Console.WriteLine(greeting);            
 
             return greeting;
-        } // End of Greet_User
+        } // End of User_Greeting
     } // End of Class
 } // End of Namespace
