@@ -1,14 +1,12 @@
 ﻿/*
     Author: Tyler Wildrick
     Date: 9/21/2020
-    Comments: This C# Console application code demonstrates the use of
-              methods after getting input from a user. The program has two
-              methods. One value return method and one void method.
-              One method is designed to calculate the users maximum heart rate
-              after entering their age. The other method is designed to 
-              calculate the users recommended heart rate range during exercise
-              based on the calculated maximum heart rate. 
-*/using System;
+    Comments: This C# Console program that demonstrates the use of a method 
+              after getting input from the user (their name) and responds
+              with a greeting. 
+*/
+
+using System;
 using System.IO;
 
 namespace TW_TechProject3A
@@ -24,31 +22,31 @@ namespace TW_TechProject3A
                 // This variable will gather data from user input
                 string input = Console.ReadLine();
                 // This variable will be used to store user's name
-                string user_name = input;
-                // REPLACE WITH METHOD!!!
-               //Console.WriteLine("Hello " + input);
+                string user_name = input;                
+                // Calls method
+                string get_user_greeting = User_Greeting (input);                                          
             } //End of Try
-            
+
             catch
             {
-
+                Console.WriteLine("Please enter an string value for your name ...");
+                Console.WriteLine("Press any key to exit the program and try again ...");
+                Console.ReadKey(true);
             } //End of Catch
+
         } // End of Main
         /*
-            This static value return method calculates your maximum heart rate
-            A static method cannot be instantiated with the key word "new".
+            This static value return method that greets the user after receiving their name.
             The accessor is private which means the method is limited to the
             containing class. 
         */
-        private static string Greet_User(string user_name)
+        private static string User_Greeting(string user_name)
         {
-            // The formula for max heart rate during exercise is 220 minus your age
+            // The formula for greeting the user
             string greeting = "Hello " + user_name;
-            Console.WriteLine(greeting);
-            //Console.WriteLine("Hello" + user_name);
-            //Console.WriteLine("Your maximum heart rate during exercise should be " + calculate_max_heart_rate + " beats per minute.");
+            Console.WriteLine(greeting);            
 
-            return user_name;
-        } // End of Max_Heart_Rate
+            return greeting;
+        } // End of Greet_User
     } // End of Class
 } // End of Namespace
